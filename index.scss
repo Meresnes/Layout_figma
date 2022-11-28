@@ -85,6 +85,10 @@ body {
         padding: 0;
         list-style-type: none;
     }
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
 }
 .wrapper {
     display: flex;
@@ -126,12 +130,52 @@ body {
                 @include links-style();
             }
         }
+        .dropdown-navbar-items {
+            height: 20px;
+            overflow: hidden;
+            transition: 1.3s;
+            a:hover {
+                color: #098a5b;
+            }
+            &:hover {
+                overflow: visible;
+            }
+            ul {
+                height: 700%;
+                li {
+                    height: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
         .navbar__right-menu {
             display: flex;
             width: 20%;
             position: relative;
             justify-content: space-around;
             align-items: center;
+            .contact-dropdown {
+                position: relative;
+                height: 100px;
+                overflow: hidden;
+                &:hover {
+                    overflow: visible;
+                }
+                a:hover {
+                    color: #098a5b;
+                }
+                ul {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    margin: 17px 0 0 16px;
+                    height: 500%;
+
+                    li {
+                        height: 50px;
+                    }
+                }
+            }
             .contact {
                 cursor: pointer;
                 border: 1px solid #098a5b;
@@ -180,6 +224,11 @@ body {
                 width: 193px;
                 height: 75px;
                 border: 1px solid #098a5b;
+                transition: 0.7s;
+                &:hover {
+                    border: 1px solid #ffffff;
+                    color: #ffffff;
+                }
             }
         }
     }
@@ -671,6 +720,11 @@ footer {
             width: 200px;
             align-items: center;
             justify-content: space-between;
+            transition: 0.7s;
+            svg {
+                cursor: pointer;
+                color: #ffffff;
+            }
         }
     }
 }
